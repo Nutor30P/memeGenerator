@@ -1,13 +1,13 @@
 import { useState } from "react";
 import html2canvas from "html2canvas";
 import "./App.css";
+import Imagen from "./component/Imagen";
 import "./memes/meme1.png";
 import "./memes/meme2.png";
 import "./memes/meme3.png";
 import "./memes/meme4.png";
 import "./memes/meme5.png";
 import "./memes/meme6.png";
-
 
 function App() {
   const [linea1, setLinea1] = useState("");
@@ -38,8 +38,7 @@ function App() {
 
   return (
     <div className="App">
-      <div 
-      className="contenedorArriba">
+      <div className="contenedorArriba">
         <h1 className="titulo">Meme Generator</h1>
         <select onChange={onChangeImagen} className="selector">
           <option value="1">Meme 1</option>
@@ -50,17 +49,27 @@ function App() {
           <option value="6">Meme 6</option>
         </select>
         <br />
-        <input onChange={onChangeLine1} type="text" placeholder="Line1" className="linea1"/>
-      <br />
-      <input onChange={onChangeLine2} type="text" placeholder="line2" className="linea2"/>
-      <br />
-      <button onClick={onClickExportar}>Exportar</button>
+        <input
+          onChange={onChangeLine1}
+          type="text"
+          placeholder="Line1"
+          className="linea1"
+        />
+        <br />
+        <input
+          onChange={onChangeLine2}
+          type="text"
+          placeholder="line2"
+          className="linea2"
+        />
+        <br />
+        <button onClick={onClickExportar}>Exportar</button>
       </div>
       <div className="contenedorImagen" id="meme">
         <span className={imagen != 4 ? "span1" : "span1B"}>{linea1}</span>
         <br />
         <span className="span2">{linea2}</span>
-        <img src={`/memes/meme${imagen}.png`} className="imagen" />
+        <Imagen imagen={`/src/memes/meme${imagen}.png`} />
       </div>
     </div>
   );
