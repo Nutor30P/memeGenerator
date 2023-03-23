@@ -2,13 +2,7 @@ import { useState } from "react";
 import html2canvas from "html2canvas";
 import "./App.css";
 import Imagen from "./component/Imagen";
-import meme1 from "../public/memes/meme1.png";
-import meme2 from "../public/memes/meme2.png";
-import meme3 from "../public/memes/meme3.png";
-import meme4 from "../public/memes/meme4.png";
-import meme5 from "../public/memes/meme5.png";
-import meme6 from "../public/memes/meme6.png";
-
+import logo from "../public/memes/meme1.png";
 
 function App() {
   const [linea1, setLinea1] = useState("");
@@ -71,8 +65,7 @@ function App() {
         <br />
         <span className="span2">{linea2}</span>
         <Imagen imagen={`/memes/meme${imagen}.png` } />
-        <img src="../public/memes/meme1.png" alt="" />
-        
+        <img src={logo} alt="" />   
       </div>
     </div>
   );
