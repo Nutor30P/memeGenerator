@@ -2,12 +2,7 @@ import { useState } from "react";
 import html2canvas from "html2canvas";
 import "./App.css";
 import Imagen from "./component/Imagen";
-import "./memes/meme1.png";
-import "./memes/meme2.png";
-import "./memes/meme3.png";
-import "./memes/meme4.png";
-import "./memes/meme5.png";
-import "./memes/meme6.png";
+
 
 function App() {
   const [linea1, setLinea1] = useState("");
@@ -69,7 +64,8 @@ function App() {
         <span className={imagen != 4 ? "span1" : "span1B"}>{linea1}</span>
         <br />
         <span className="span2">{linea2}</span>
-        <Imagen imagen={`./memes/meme${imagen}.png`} />
+        <Imagen imagen={`/public/memes/meme${imagen}.png` } />
+        
       </div>
     </div>
   );
