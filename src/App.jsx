@@ -69,7 +69,7 @@ function App() {
         <span className={imagen != 4 ? "span1" : "span1B"}>{linea1}</span>
         <br />
         <span className="span2">{linea2}</span>
-        <Imagen imagen={`/src/memes/meme${imagen}.png`} />
+        <Imagen imagen={`./memes/meme${imagen}.png`} />
       </div>
     </div>
   );
