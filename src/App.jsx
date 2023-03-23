@@ -1,6 +1,13 @@
 import { useState } from "react";
 import html2canvas from "html2canvas";
 import "./App.css";
+import "./memes/meme1.png";
+import "./memes/meme2.png";
+import "./memes/meme3.png";
+import "./memes/meme4.png";
+import "./memes/meme5.png";
+import "./memes/meme6.png";
+
 
 function App() {
   const [linea1, setLinea1] = useState("");
